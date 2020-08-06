@@ -1,2 +1,2 @@
 # Corphusator
-Corphusator turns the lexical database CorPH into .txt-files
+Corphusator turns .csv-files of the lexical database CorPH into tagged .txt-files.
