@@ -3,6 +3,7 @@
 Due to the detailed lemmatisation down to the level of preverbs and particles, the transformation of the tokens of the lexical database CorPH (http://chronhib.maynoothuniversity.ie)) into continuous text is not straightforward.
 
 Corphusator is a Python3-based programme which enables the users to get fully tagged continuous .txt-files. The following tags are available:
+
       1) POS
       2) morphological
       3) both
@@ -10,6 +11,7 @@ Corphusator is a Python3-based programme which enables the users to get fully ta
 # Requirements:
 
 Make sure that the following Python-packages are installed:
+
     - pandas
     - pathlib
     - tqdm
@@ -22,15 +24,18 @@ the output(s) will be stored in the former.
 Export a .csv-file from CorPH (see the documentation on the website) including including the columns below and store it in the folder "CorphExports":
 
   From MORPHOLOGY:
+  
     - ID
     - Text_Unit_ID
     - Morph
     - Analysis
     - Lemma
   From LEMMATA:
+  
     - Part_Of_Speech
     - Lang
   From SENTENCES:
+  
     - Textual_Unit
 
 # Running the Corphusator:
@@ -41,6 +46,7 @@ In some cases further user input is necessary, e.g., if there are problems with 
 necessary steps.
 
 After completion the user is asked to enter
+
   1) for POS-tags only
   2) for morphological tags only
   3) for both tags
