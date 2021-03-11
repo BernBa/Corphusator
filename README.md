@@ -1,6 +1,6 @@
 # Corphusator
 
-Due to the detailed lemmatisation down to the level of preverbs and particles, the transformation of the tokens of the lexical database CorPH (http://chronhib.maynoothuniversity.ie)) into continuous text is not straightforward.
+Due to the detailed lemmatisation down to the level of preverbs and particles, the transformation of the tokens of the lexical database CorPH (http://chronhib.maynoothuniversity.ie) into continuous text is not straightforward.
 
 Corphusator is a Python3-based programme which enables the users to get fully tagged continuous .txt-files. The following tags are available:
 
@@ -21,7 +21,7 @@ Please create a folder for the Corphusator including the subfolders "Corphusated
 the output(s) will be stored in the former.
 
 # The input file:
-Export a .csv-file from CorPH (see the documentation on the website) including including the columns below and store it in the folder "CorphExports":
+Export a .csv-file from CorPH (see the documentation on the website) including the columns below and store it in the folder "CorphExports":
 
   From MORPHOLOGY:
   
