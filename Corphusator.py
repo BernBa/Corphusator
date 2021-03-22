@@ -433,6 +433,7 @@ for I in tqdm(ID):
         # Combines those compounds which don't have a combined compound in the database
         if "compos." in item:
             if it + ne == se:
+
                 try:
                     thpos
                 except NameError:
@@ -444,6 +445,12 @@ for I in tqdm(ID):
                     if thpos in ("particle_demonstrative_distal", "particle_demonstrative_proximate", "particle_anaphoric"):
                         combined = (se + "-" + th + "/compound_" + nepos + "+" + thpos + "|" + sean + "+" + than)
                         n += 4
+                    else:
+                        combined = (se + "/compound_" + nepos + "|" + sean)
+                        combined = update_combined(combined)
+                        newpos.append(combined)
+                        n += 3
+                        
 
             else:
                 if it == ne[:len(it)]:
@@ -503,6 +510,15 @@ for I in tqdm(ID):
         if it == "ar" and ne == "ind" and se in ("í", "i"):
             n += 3
             continue
+        
+        # expection for cein·mair
+        if it in ("céin·", "Céin·") and ne == "·mair":
+            n += 2
+            continue
+        if it == "céin" and ne == "do·" and se == "·mair":
+            n += 3
+            continue
+        
         
 # =============================================================================
 # Looks for combinations
@@ -844,7 +860,7 @@ for I in tqdm(ID):
                         ne = ne.replace('-', '')
                     combined = (it + "-" + ne + "/" + itpos + "+" + nepos + "|" + itan + "+" + nean)
                 
-                elif it == "7":
+                elif it in ("7", "ocus"):
                     newpos.append(item)
                     n += 1
                     item = 0
@@ -867,8 +883,11 @@ for I in tqdm(ID):
                         
                 elif itpos == "conjunction":
                     if itemID in conlist:
-                        combined = (it + "/" + itpos + "|" + itan)
-                        n -= 1
+                        if it in ("ci", "ma") and nepos == "copula":
+                            combined = (it + ne + "/" + itpos + "+" + nepos + "|" + nean)
+                        else:
+                            combined = (it + "/" + itpos + "|" + itan)
+                            n -= 1
                     else:
                         combined = (it + ne + "/" + itpos + "+" + nepos + "|" + nean)
     
