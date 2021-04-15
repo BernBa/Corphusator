@@ -67,9 +67,9 @@ represented as follows: "is/verb|3sg.pres.ind."
 The tagged text for every Textual Unit is concluded with a linebreak (\n). If the Textual Units themselves are also represented a second linebreak is
 added after the tagged text:
 
-  "Textual Unit 1
+  "Textual Unit 1 \n
   Tagged Textual Unit 1
 
-  Textual Unit 2
+  Textual Unit 2 \n
   Tagged Textual Unit 2"
 
